@@ -1,0 +1,24 @@
+<article>
+    <h2>{{articleDetails.title | titlecase}}</h2>
+
+    <div class="info">
+        <span>Created On</span>
+        <span>{{articleDetails.createdAt | date:'medium' }}</span>
+
+        <span>Created By</span>
+        <span>{{articleDetails.createdBy | titlecase}}</span>
+
+        <span>Last Modified At</span>
+        <span>{{articleDetails.modifiedAt | date:'medium'}}</span>
+
+    </div>
+
+    <section class="paragraphs">
+        <section class="paragraph" *ngFor="let paragraph of articleDetails.description">
+            <h3>{{paragraph.content}}</h3>
+            <img src="../../../assets/{{paragraph.imageName}}" alt="">
+        </section>
+    </section>
+</article>
+
+<suggested-articles></suggested-articles>

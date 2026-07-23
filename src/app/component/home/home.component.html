@@ -1,0 +1,37 @@
+<section [ngClass]="articles.type" *ngFor="let articles of articlesToDisplay">
+    <h1>{{articles.type.split("-").join(" ") | titlecase}}</h1>
+    <div class="articles">
+        <div class="main-article">
+            <article-thumbnail [article]="articles.articles[0]"></article-thumbnail>
+        </div>
+        <div class="other-articles">
+            <article-thumbnail  *ngFor="let article of articles.articles.slice(1)" view="other" [article]="article"></article-thumbnail>
+        </div>
+    </div>    
+</section>
+
+
+ <section class="most-popular">
+    <h1>Most Popular</h1>
+    <div class="articles">
+        <div class="main-article">
+            <article-thumbnail [article]="articlesToDisplay[0].articles[0]"></article-thumbnail>
+        </div>
+        <div class="other-articles">
+            <article-thumbnail></article-thumbnail>
+            <article-thumbnail></article-thumbnail>
+            <article-thumbnail></article-thumbnail>
+            <article-thumbnail></article-thumbnail>
+        </div>
+    </div>    
+</section>
+
+<section class="educations">
+    <h1>Education</h1>
+</section>
+<section class="elections">
+
+</section>
+<section class="bollywood">
+
+</section> 
