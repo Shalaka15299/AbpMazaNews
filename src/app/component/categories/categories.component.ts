@@ -12,7 +12,7 @@ export class CategoriesComponent implements OnInit {
 
   ngOnInit(): void {
     this.categories =[
-      'environment',
+       'environment',
       'indian-Politics',
       'international-Politics',
       'education',
@@ -20,7 +20,8 @@ export class CategoriesComponent implements OnInit {
       'religion',
       'bollywood',
       'tollywood',
-      'technology'
+      'technology',
+      'Marathi Entertainment'
     ]
   }
 
